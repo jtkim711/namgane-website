@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.namgane.com/sitemap.xml
+
+# 구글 크롤러
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# 네이버 크롤러
+User-agent: Yeti
+Allow: /
+Crawl-delay: 1
+
+# 빙 크롤러
+User-agent: bingbot
+Allow: /
+Crawl-delay: 1
