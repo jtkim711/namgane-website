@@ -808,3 +808,186 @@ h3 { font-size: clamp(1.1rem, 2vw, 1.5rem); }
 .mb-16 { margin-bottom: 16px; }
 .mb-32 { margin-bottom: 32px; }
 .hidden { display: none !important; }
+
+/* ---- Top Announcement Bar (mrgfood.kr style) ---- */
+.top-bar {
+  background: #f5e6cc;
+  color: #5a3e1b;
+  text-align: center;
+  font-size: 0.82rem;
+  padding: 9px 24px;
+  letter-spacing: 0.02em;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1001;
+  border-bottom: 1px solid #e8d5b0;
+}
+#site-nav { top: 38px; }
+.hero { margin-top: calc(var(--nav-h) + 38px); }
+.page-header { margin-top: calc(var(--nav-h) + 38px); }
+.mobile-nav { top: calc(var(--nav-h) + 38px); }
+.nav-logo img { display: block; height: 44px; width: auto; }
+
+
+/* ========================================
+   담순대 스타일 리디자인 — 화이트 헤더
+   ======================================== */
+
+/* nav 배경 흰색, 보더 하단 */
+#site-nav {
+  top: 0 !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid #e8e0d4;
+  box-shadow: none;
+}
+#site-nav.scrolled { box-shadow: 0 2px 16px rgba(43,31,14,0.08); }
+
+/* 로고 — 텍스트 전용 */
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  text-decoration: none;
+  gap: 1px;
+}
+.nav-logo .logo-brand {
+  font-family: var(--font-ko);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #2b1f0e;
+  letter-spacing: -0.01em;
+}
+.nav-logo .logo-sub {
+  font-size: 0.68rem;
+  color: #8a7055;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.nav-logo .logo-since {
+  font-size: 0.62rem;
+  color: var(--color-accent);
+  letter-spacing: 0.1em;
+  font-family: var(--font-en);
+}
+
+/* nav 링크 — 어두운 텍스트 */
+.nav-links a {
+  color: #4a3520 !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 18px;
+}
+.nav-links a:hover,
+.nav-links a.active { color: var(--color-accent) !important; }
+
+/* 가맹 상담 버튼 */
+.nav-cta {
+  background: var(--color-accent) !important;
+  color: #ffffff !important;
+  padding: 10px 22px !important;
+  border-radius: 4px !important;
+  font-weight: 700 !important;
+}
+.nav-cta:hover {
+  background: var(--color-accent-lt) !important;
+  color: #ffffff !important;
+}
+
+/* 서브메뉴 배경 */
+.nav-links .sub-menu {
+  background: #ffffff;
+  border-top: 2px solid var(--color-accent);
+  box-shadow: 0 8px 24px rgba(43,31,14,0.1);
+}
+.nav-links .sub-menu a { color: #4a3520 !important; }
+
+/* 모바일 햄버거 */
+.nav-hamburger span { background: #2b1f0e; }
+
+/* 모바일 nav */
+.mobile-nav {
+  top: var(--nav-h) !important;
+  background: #ffffff;
+  border-top: 1px solid #e8e0d4;
+}
+.mobile-nav a { color: #4a3520; border-bottom: 1px solid #f0e8dc; }
+.mobile-nav a:hover { color: var(--color-accent); }
+
+/* hero/page-header: top-bar 없으므로 nav-h 만큼만 */
+.hero { margin-top: var(--nav-h) !important; }
+.page-header { margin-top: var(--nav-h) !important; }
+
+/* top-bar 제거 */
+.top-bar { display: none !important; }
+
+/* ── 새 footer 스타일 ── */
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 48px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  min-width: 140px;
+}
+.footer-logo .logo-brand {
+  font-family: var(--font-ko);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+.footer-logo .logo-sub {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.08em;
+}
+.footer-desc {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.8;
+  max-width: 320px;
+}
+.footer-social { display: flex; gap: 16px; margin-top: 4px; }
+.footer-social a {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.45);
+  transition: color 0.2s;
+}
+.footer-social a:hover { color: var(--color-accent); }
+.footer-mid {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 36px;
+}
+.footer-tel {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: var(--font-en);
+  margin-bottom: 6px;
+}
+.footer-hours { font-size: 0.78rem; line-height: 1.9; }
+.footer-biz { font-size: 0.75rem; line-height: 1.9; }
+.footer-copy { font-size: 0.75rem; opacity: 0.4; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .footer-top { flex-direction: column; }
+  .footer-mid { flex-direction: column; gap: 24px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
